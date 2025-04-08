@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script>(function(w,d,s,u){
-  let j=d.createElement(s);
-  j.async=true;j.src="https://dev-assets.channelboost.com/scripts/cts.js?uid=" + u;
-  let f=d.getElementsByTagName(s)[0];
-  f.parentNode.insertBefore(j,f);
-})(window,document,"script","5cc72bb4-f0cd-45f6-996e-387a4f23d0be");
-  function trackAndRedirect(event, url) {
+  <head>
+    <script>
+      (function (w, d, s, u) {
+        let j = d.createElement(s);
+        j.async = true;
+        j.src = "https://dev-assets.channelboost.com/scripts/cts.js?uid=" + u;
+        let f = d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "69f7fdc3-3a77-41fd-9203-0e4cefc7afb8");
+      function trackAndRedirect(event, url) {
         event.preventDefault(); // Prevents default link action
         if (typeof trackify !== "undefined" && trackify.trackEvent) {
           trackify.trackEvent("sign_up");
-          console.log("trackify.trackEvent("sing_up") called");
+          console.log("trackify.trackEvent('sign_up') called");
           // Open the URL in a new tab after a short delay
           setTimeout(() => {
             window.open(url, "_blank", "noopener,noreferrer");
@@ -21,8 +23,8 @@
           window.open(url, "_blank", "noopener,noreferrer");
         }
       }
-  </script>
-  <meta charset="UTF-8" />
+    </script>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coachbar.io Onboarding</title>
     <style>
@@ -85,11 +87,10 @@
       }
     </style>
   </head>
-  
   <body>
     <!-- Heading -->
-    <h1>Welcome to Coachbar Customer Success</h1>
-    
+    <h1>Welcome to Coachbar Onboarding Team</h1>
+    <h2>Let us test CPA Campaigns by clicking on Sign Up</h2>
     <!-- Buttons -->
     <div class="button-container">
       <a
@@ -114,4 +115,3 @@
     </div>
   </body>
 </html>
-
