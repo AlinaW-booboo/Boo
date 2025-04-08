@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script>(function(w,d,s,u){
+  let j=d.createElement(s);j.async=true;
+  j.src="https://dev-assets.channelboost.com/scripts/cts.js?uid=" + u;
+  let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","5cc72bb4-f0cd-45f6-996e-387a4f23d0be");
+    function trackAndRedirect(event, url) {
+        event.preventDefault(); // Prevents default link action
+        if (typeof trackify !== "undefined" && trackify.trackEvent) {
+          trackify.trackEvent("sign_up");
+          console.log("trackify.trackEvent('sign_up') called");
+          // Open the URL in a new tab after a short delay
+          setTimeout(() => {
+            window.open(url, "_blank", "noopener,noreferrer");
+          }, 300); // Delay for 300ms to allow tracking
+        } else {
+          // If trackify isn't available, open the link immediately
+          window.open(url, "_blank", "noopener,noreferrer");
+        }
+      }
+</script>
   <meta charset="UTF-8">
   <title>Coachbar Simple Page</title>
   <style>
@@ -33,5 +53,14 @@
   <button onclick="alert('Sign In page coming soon')">Sign In</button>
   <button onclick="alert('Visit Coachbar page coming soon')">Visit Coachbar</button>
 
+</body>
+
+  <body>
+  <!-- Buttons -->
+  <div class="button-container">
+    <a class="btn" onclick="trackAndRedirect(event, 'https://coachbar.io/product-archive/')">Sign Up</a>
+    <a href="https://coachbar.io/signin" class="btn" target="_blank" rel="noopener noreferrer">Sign In</a>
+    <a href="https://coachbar.io" class="btn" target="_blank" rel="noopener noreferrer">Visit Coachbar</a>
+  </div>
 </body>
 </html>
