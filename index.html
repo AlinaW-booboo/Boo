@@ -49,18 +49,10 @@
 <body>
   <h1>Welcome to Coachbar</h1>
 
-  <button onclick="window.location.href='https://coachbar.io/product-archive/'">Sign Up</button>
+  <button onclick="trackAndRedirect(event, 'https://coachbar.io/product-archive/')">Sign Up</button>
   <button onclick="alert('Sign In page coming soon')">Sign In</button>
   <button onclick="alert('Visit Coachbar page coming soon')">Visit Coachbar</button>
 
 </body>
 
-  <body>
-  <!-- Buttons -->
-  <div class="button-container">
-    <a class="btn" onclick="trackAndRedirect(event, 'https://coachbar.io/product-archive/')">Sign Up</a>
-    <a href="https://coachbar.io/signin" class="btn" target="_blank" rel="noopener noreferrer">Sign In</a>
-    <a href="https://coachbar.io" class="btn" target="_blank" rel="noopener noreferrer">Visit Coachbar</a>
-  </div>
-</body>
 </html>
