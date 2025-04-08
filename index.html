@@ -1,76 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>(function(w,d,s,u){
-  let j=d.createElement(s);
-  j.async=true;
-  j.src="https://dev-assets.channelboost.com/scripts/cts.js?uid=" + u;
-  let f=d.getElementsByTagName(s)[0];
-  f.parentNode.insertBefore(j,f);
-})(window,document,"script","69f7fdc3-3a77-41fd-9203-0e4cefc7afb8");
-    function trackAndRedirect(event, url) {
-        event.preventDefault(); // Prevents default link action
-        if (typeof trackify !== "undefined" && trackify.trackEvent) {
-          trackify.trackEvent("sign_up");
-          console.log("trackify.trackEvent("sign_up") called");
-          // Open the URL in a new tab after a short delay
-          setTimeout(() => {
-            window.open(url, "_blank", "noopener,noreferrer");
-          }, 300); // Delay for 300ms to allow tracking
-        } else {
-          // If trackify isn't available, open the link immediately
-          window.open(url, "_blank", "noopener,noreferrer");
-        }
-      }
-</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Example</title>
+  <title>Simple Website</title>
   <style>
-    /* General body styling */
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-top: 100px;
     }
-    /* Container for buttons */
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    /* Styling for buttons */
-    .btn {
-      background-color: #007BFF;
-      color: white;
-      padding: 15px 25px;
-      border: none;
-      border-radius: 5px;
+
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 1em;
-      text-decoration: none;
-      display: inline-block;
-      width: 200px;
-      text-align: center;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .btn:hover {
-      background-color: #0056B3;
-      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <!-- Buttons -->
-  <div class="button-container">
-    <a class="btn" onclick="trackAndRedirect(event,'https://coachbar.io/product-archive/')">Sign Up</a>
-    <a href="https://coachbar.io/signin" class="btn" target="_blank" rel="noopener noreferrer">Sign In</a>
-    <a href="https://coachbar.io" class="btn" target="_blank" rel="noopener noreferrer">Visit Coachbar</a>
-  </div>
+  <h1>Welcome to Our Site</h1>
+
+  <button onclick="window.location.href='https://coachbar.io/'">Sign Up</button>
+  <button onclick="alert('Sign In page coming soon!')">Sign In</button>
+  <button onclick="alert('Contact us at support@example.com')">Contact Us</button>
+
 </body>
 </html>
+
