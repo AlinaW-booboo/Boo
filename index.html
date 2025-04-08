@@ -12,7 +12,7 @@
         event.preventDefault(); // Prevents default link action
         if (typeof trackify !== "undefined" && trackify.trackEvent) {
           trackify.trackEvent("sign_up");
-          console.log("trackify.trackEvent('sign_up') called");
+          console.log("trackify.trackEvent("sign_up") called");
           // Open the URL in a new tab after a short delay
           setTimeout(() => {
             window.open(url, "_blank", "noopener,noreferrer");
