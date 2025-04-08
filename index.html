@@ -22,28 +22,74 @@
         }
       }
   </script>
-  <meta charset="UTF-8">
-  <title>Simple Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    button {
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coachbar.io Onboarding</title>
+    <style>
+      /* General body styling */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: turquoise; /* Turquoise background */
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+      /* Styling for the heading */
+      h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        margin-top: 50px;
+      }
+      h1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.2)
+        );
+        transition: left 0.5s;
+      }
+      h1:hover::before {
+        left: 100%;
+      }
+      /* Container for buttons */
+      .button-container {
+        margin-top: 30px;
+      }
+      /* Styling for buttons */
+      .btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 15px 25px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      .btn:hover {
+        background-color: #0056B3;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  
   <body>
     <!-- Heading -->
     <h1>Welcome to Coachbar Onboarding Team</h1>
-    <h2>Let us test CPA Campaigns by clicking on Sign Up</h2>
+    
     <!-- Buttons -->
     <div class="button-container">
       <a
@@ -66,6 +112,6 @@
         >KB Article</a
       >
     </div>
-</body>
+  </body>
 </html>
 
